@@ -1,9 +1,5 @@
-const router = require("./src/router");
-const { setEngine,
-        setCockpit } = require("./src/engine");
+const Director = require('./src/builder');
 
 module.exports = {
-  router,
-  setEngine,
-  setCockpit,
+  Workflow: Director,
 };
