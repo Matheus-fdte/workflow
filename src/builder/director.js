@@ -1,8 +1,10 @@
+const debug = require('debug')('flowbuild:Director');
 const Builder = require('./builder');
 
 let builder;
 class Director {
   constructor() {
+    debug('builder inicialization');
     builder = new Builder();
   }
 
@@ -15,6 +17,7 @@ class Director {
   }
 
   async start(onServerStarted) {
+    debug('starting flowbuild service');
     try {
       builder.configureApiServer();
       builder.startServer(onServerStarted);

@@ -13,7 +13,6 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@flowbuild/engine": "^1.1.1",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/npm": "^7.0.5",
@@ -24,6 +23,7 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "@flowbuild/engine": "^1.1.1",
     "ajv": "^6.10.2",
     "knex": "^0.19.5",
     "koa": "^2.11.0",
@@ -34,6 +34,7 @@
     "koa-router": "^7.4.0",
     "koa2-cors": "^2.0.6",
     "pg": "^7.14.0",
+    "debug": "4.1.1",
     "uuid": "^3.3.3"
   },
   "keywords": [],
