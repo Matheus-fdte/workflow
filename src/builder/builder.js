@@ -1,6 +1,7 @@
 // koa imports
 const Koa = require('koa');
 const debug = require('debug')('flowbuild:builder');
+const awilix = require('awilix');
 // internal imports
 const Routers = require('../routes');
 const Middlewares = require('../middlewares');
@@ -13,6 +14,10 @@ class Builder {
       database: {},
       api: {},
     };
+
+    this.container = awilix.createContainer({
+      injectionMode: 'PROXY',
+    });
   }
 
   configureApiServer() {
