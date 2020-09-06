@@ -1,24 +1,26 @@
 function loggerService({ loggerSettings }) {
   // setup week logger
+  let _week;
+  let _info;
   if (loggerSettings.level === 1) {
-    this._week = (text) => console.log(text);
+    _week = (text) => console.log(text);
   } else {
-    this._week = () => {};
+    _week = () => {};
   }
 
   // setup info logger
   if (loggerSettings.level > 0) {
-    this._info = (text) => console.log(text);
+    _info = (text) => console.log(text);
   }
   if (loggerSettings.level > 0) {
-    this._info = () => {};
+    _info = () => {};
   }
 
   function week(text) {
-    this._week(text);
+    _week(text);
   }
   function info(text) {
-    this._info(text);
+    _info(text);
   }
   function strong(text) {
     console.log(text);
