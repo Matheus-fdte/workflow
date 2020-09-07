@@ -25,6 +25,7 @@
   "dependencies": {
     "@flowbuild/engine": "^1.1.1",
     "ajv": "^6.10.2",
+    "async-mqtt": "^2.6.1",
     "awilix": "4.2.6",
     "awilix-koa": "^4.0.0",
     "debug": "4.1.1",
