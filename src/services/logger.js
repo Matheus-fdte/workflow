@@ -29,7 +29,11 @@ function loggerService({ loggerSettings }) {
     console.warn(text);
   }
   function error(err) {
-    console.error(err.stack);
+    if (err.stack) {
+      console.error(err.stack);
+    } else {
+      console.error(err);
+    }
   }
 
   return {
