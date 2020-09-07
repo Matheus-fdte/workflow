@@ -30,19 +30,18 @@ function databaseService({ dbSettings, loggerService }) {
   try {
     if (dbSettings.useDatabase) {
       _db = Knex(dbSettings.dbConfigureation);
-    }
-
-    if (dbSettings.executeDefaultMigrations) {
-      executeInternalMigrations();
-    }
-    if (dbSettings.executeDefaultSeeds) {
-      executeInternalSeeds();
-    }
-    if (dbSettings.executeExternalMigrations) {
-      executeExternalMigrations();
-    }
-    if (dbSettings.executeExternalSeeds) {
-      executeExternalSeeds();
+      if (dbSettings.executeDefaultMigrations) {
+        executeInternalMigrations();
+      }
+      if (dbSettings.executeDefaultSeeds) {
+        executeInternalSeeds();
+      }
+      if (dbSettings.executeExternalMigrations) {
+        executeExternalMigrations();
+      }
+      if (dbSettings.executeExternalSeeds) {
+        executeExternalSeeds();
+      }
     }
   } catch (e) {
     loggerService.error(e);
